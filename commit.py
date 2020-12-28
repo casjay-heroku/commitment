@@ -109,17 +109,26 @@ class HumansHandler(tornado.web.RequestHandler):
         self.write(humans_content)
 
 
+class FortuneHandler(MainHandler):
+    def index(request):
+        r = requests.get('https://fortuneapi.herokuapp.com')
+        print(r.text)
+        return HttpResponse('<pre>' + r.text + '</pre>')
+
+
 settings = {
     'static_path': os.path.join(os.path.dirname(__file__), 'static'),
 }
 
 application = tornado.web.Application([
     (r'/', MainHandler),
-    (r'/([a-z0-9]+)', MainHandler),
-    (r'/index.json', JsonHandler),
-    (r'/([a-z0-9]+).json', JsonHandler),
+    (r'/text', PlainTextHandler),
+    (r'/json', JsonHandler),
     (r'/index.txt', PlainTextHandler),
-    (r'/([a-z0-9]+)/index.txt', PlainTextHandler),
+    (r'/index.json', JsonHandler),
+    (r'/([a-z0-9]+)', MainHandler),
+    (r'/([a-z0-9]+).txt', PlainTextHandler),
+    (r'/([a-z0-9]+).json', JsonHandler),
     (r'/humans.txt', HumansHandler),
 ], **settings)
 
