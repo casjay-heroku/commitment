@@ -109,11 +109,11 @@ class HumansHandler(tornado.web.RequestHandler):
         self.write(humans_content)
 
 
-class FortuneHandler(MainHandler):
-    def index(request):
-        r = requests.get('https://fortuneapi.herokuapp.com')
-        print(r.text)
-        return HttpResponse('<pre>' + r.text + '</pre>')
+# class FortuneHandler(MainHandler):
+#     def index(request):
+#         r = requests.get('https://fortuneapi.herokuapp.com')
+#         print(r.text)
+#         return HttpResponse('<pre>' + r.text + '</pre>')
 
 
 settings = {
