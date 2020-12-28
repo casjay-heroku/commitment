@@ -105,7 +105,7 @@ class JsonHandler(MainHandler):
 class MessagesHandler(tornado.web.RequestHandler):
     def get(self):
         self.set_header('Content-Type', 'text/plain')
-        self.write(messages_file)
+        self.write(messages_input)
 
 
 class HumansHandler(tornado.web.RequestHandler):
