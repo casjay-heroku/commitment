@@ -1,1 +1,1 @@
-web: python3 commit.py
+web: python commit.py
