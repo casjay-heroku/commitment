@@ -16,9 +16,8 @@
 <body>
 
   <div class="container">
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#"><img src="https://avatars3.githubusercontent.com/u/62525368?s=200&v=4" width="60"
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark h4">
+      <a class="navbar-brand" href="/"><img src="https://avatars3.githubusercontent.com/u/62525368?s=200&v=4" width="60"
           height="60" class="d-inline-block align-top" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,23 +33,27 @@
           </li>
         </ul>
         <span class="navbar-text">
-          <a href="https://github.com/casjay-heroku/commitment">GitHub</a>
+          <a href="https://github.com/casjay-heroku/commitment" target="_blank">GitHub</a>
         </span>
       </div>
     </nav>
 
-    <div class="text-center">
-      <br /><br /><br />
-      <p class="border border-info h1">
-        {% raw message %}
-      </p>
-      <br /><br /><br />
-      <span class="align-bottom">
-        <button type="button" class="float-left btn btn-outline-success"><a href="/"> Random </a></button>
-        <button type="button" class="float-right btn btn-outline-danger"><a href="/{{ message_hash }}"> Permalink
-          </a></button>
-      </span>
+    <br /><br /><br />
+    <div class="vh-100 text-center">
+      <div class="h-25">
+        <p class="border border-info h1">{% raw message %}</p>
+        <br /><br /><br />
+        <span class="align-center">
+          <span class="mr-5">
+            <button type="button" class="btn btn-outline-success"><a href="/">Random</a></button>
+          </span>
+          <span class="ml-5">
+            <button type="button" class="btn btn-outline-danger"><a href="/{{ message_hash }}">Permalink</a></button>
+          </span>
+        </span>
+      </div>
     </div>
+    <br /><br /><br />
 </body>
 
 </html>
