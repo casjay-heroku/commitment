@@ -102,6 +102,12 @@ class JsonHandler(MainHandler):
             '\n', ''), 'permalink': self.request.protocol + "://" + self.request.host + '/' + message_hash}))
 
 
+class MessagesHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.set_header('Content-Type', 'text/plain')
+        self.write(messages_file)
+
+
 class HumansHandler(tornado.web.RequestHandler):
     def get(self):
         self.set_header('Content-Type', 'text/plain')
@@ -123,7 +129,8 @@ application = tornado.web.Application([
     (r'/([a-z0-9]+).txt', PlainTextHandler),
     (r'/([a-z0-9]+).json', JsonHandler),
     (r'/([a-z0-9]+).html', MainHandler),
-    (r'/humans.txt', HumansHandler),
+    (r'/messages', MessagesHandler),
+    (r'/humans', HumansHandler),
 ], **settings)
 
 if __name__ == '__main__':
