@@ -18,10 +18,8 @@ from tornado.options import define, options
 
 define("port", default=5000, help="run on the given port", type=int)
 
-names = ['Nick', 'Steve', 'Andy', 'Qi', 'Fanny', 'Sarah', 'Cord', 'Todd',
-         'Chris', 'Pasha', 'Gabe', 'Tony', 'Jason', 'Randal', 'Ali', 'Kim',
-         'Rainer', 'Guillaume', 'Kelan', 'David', 'John', 'Stephen', 'Tom', 'Steven',
-         'Jen', 'Marcus', 'Edy', 'Rachel']
+names = ['Nick', 'Steve', 'Andy', 'Qi', 'Fanny', 'Sarah', 'Cord', 'Todd', 'Chris', 'Pasha', 'Gabe', 'Tony', 'Jason', 'Randal',
+         'Ali', 'Kim', 'Rainer', 'Guillaume', 'Kelan', 'David', 'John', 'Stephen', 'Tom', 'Steven', 'Jen', 'Marcus', 'Edy', 'Rachel']
 
 humans_file = os.path.join(os.path.dirname(__file__), 'static', 'humans.txt')
 messages_file = os.path.join(os.path.dirname(__file__), 'commit_messages.txt')
@@ -123,11 +121,11 @@ settings = {
 
 application = tornado.web.Application([
     (r'/', MainHandler),
-    (r'/text', PlainTextHandler),
+    (r'/txt', PlainTextHandler),
     (r'/json', JsonHandler),
     (r'/index.txt', PlainTextHandler),
     (r'/index.json', JsonHandler),
-    (r'/([a-z0-9]+)', MainHandler),
+    (r'/([a-z0-9]+).htm', MainHandler),
     (r'/([a-z0-9]+).txt', PlainTextHandler),
     (r'/([a-z0-9]+).json', JsonHandler),
     (r'/humans.txt', HumansHandler),
