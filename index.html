@@ -2,17 +2,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Commit Message Generator</title>
+    <title>Git Commit Message Generator</title>
     <link rel="author" href="/humans.txt" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css" integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <div id="content">
+    <div class="container">
+    <div class="text-center">
         <p>{% raw message %}</p>
+        <br /><br /><br />
         <p class="permalink">
-            [<a href="/{{ message_hash }}">permalink</a>]
+            <button type="button" class="btn btn-secondary">[<a href="/{{ message_hash }}">permalink</a>]</button>
         </p>
     </div>
 </body>
