@@ -603,3 +603,7 @@ starting the service is always better
 Fix all errors, all errors on the WORLD!!!!
 god help us all
 lets drink beer
+Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday’s code
+Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away
+Code is like humor. When you have to explain it, it’s bad
+Make it work, make it right, make it fast
