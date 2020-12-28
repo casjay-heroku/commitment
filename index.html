@@ -16,24 +16,25 @@
 <body>
 
   <div class="container">
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#"><img src="https://avatars3.githubusercontent.com/u/62525368?s=200&v=4" width="30"
-          height="30" class="d-inline-block align-top" alt=""></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#"><img src="https://avatars3.githubusercontent.com/u/62525368?s=200&v=4" width="60"
+          height="60" class="d-inline-block align-top" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/"> Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/{{ message_hash }}"> Permalink </a>
+            <a class="nav-link" href="/{{ message_hash }}">Permalink</a>
           </li>
         </ul>
         <span class="navbar-text">
-          <a class="nav-link" href="https://github.com/casjay-heroku/commitment">GitHub</a>
+          <a href="https://github.com/casjay-heroku/commitment">GitHub</a>
         </span>
       </div>
     </nav>
@@ -45,8 +46,8 @@
       </p>
       <br /><br /><br />
       <span class="align-bottom">
-        <button type="button" class="text-left btn btn-outline-success"><a href="/"> Random </a></button>
-        <button type="button" class="text-right btn btn-outline-danger"><a href="/{{ message_hash }}"> Permalink
+        <button type="button" class="float-left btn btn-outline-success"><a href="/"> Random </a></button>
+        <button type="button" class="float-right btn btn-outline-danger"><a href="/{{ message_hash }}"> Permalink
           </a></button>
       </span>
     </div>
