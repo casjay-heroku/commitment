@@ -17,5 +17,6 @@ Or use the [WhatTheCommit](https://marketplace.visualstudio.com/items?itemName=G
 
 This is a fork of <https://github.com/ngerakines/commitment>  
 Copyright (c) 2010-2017 Nick Gerakines <nick@gerakines.net>  
+Copyright (c) 2020 CasjaysDev <git-admin@casjaysdev.com>  
   
-This project and its contents are open source under the MIT license.  
+This project and its contents are open source under the [MIT license](LICENSE.md).  
