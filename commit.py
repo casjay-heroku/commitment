@@ -123,6 +123,12 @@ settings = {
 
 application = tornado.web.Application([
     (r'/', MainHandler),
+    (r'/html', MainHandler),
+    (r'/html/', MainHandler),
+    (r'/json', JsonHandler),
+    (r'/json/', JsonHandler),
+    (r'/txt', PlainTextHandler),
+    (r'/txt/', PlainTextHandler),
     (r'/([a-z0-9]+)', MainHandler),
     (r'/index.json', JsonHandler),
     (r'/([a-z0-9]+).json', JsonHandler),
