@@ -1,6 +1,19 @@
 /* TEAM */
-Developer: Jason Hempstead, Casjays Developments
+Developer: Casjays Devlopments
 Site: http://github.com/casjay
 Twitter: @casjay
 Location: New York, USA
+
+/* THANKS */
+Name: github:casjay
+Name: github:casjaysdev
+
+/* SITE */
+Last update: 2014/04/17
+Standards: HTML5, CSS3
+Software: Vim, Git, Python, TextMate
+
+/* SOURCE */
+Source: https://github.com/casjay-heroku/commitment
+License: MIT
 
