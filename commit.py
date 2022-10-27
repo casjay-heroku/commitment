@@ -17,7 +17,7 @@ import tornado.web
 from tornado.escape import xhtml_unescape
 from tornado.options import define, options
 
-define("port", default=5000, help="run on the given port", type=int)
+define("port", default=80, help="run on the given port", type=int)
 
 names = ['Nick', 'Steve', 'Andy', 'Qi', 'Fanny', 'Sarah', 'Cord', 'Todd',
          'Chris', 'Pasha', 'Gabe', 'Tony', 'Jason', 'Randal', 'Ali', 'Kim',

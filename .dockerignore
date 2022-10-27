@@ -1,0 +1,14 @@
+# Files to ignore
+.gitkeep
+.gitignore
+node_modules/**
+.node_modules/**
+**/.gitkeep
+**/.gitignore
+**/node_modules/**
+**/.node_modules/**
+Dockerfile
+LICENSE.md
+README.md
+rootfs
+version.txt

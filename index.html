@@ -1,86 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Git Commit Message Generator</title>
+    <link rel="author" href="/humans.txt" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css"
+      integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Git Commit Message Generator</title>
-  <link rel="author" href="/humans.txt" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css"
-    integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark h4">
-      <a class="navbar-brand" href="/"><img src="https://avatars3.githubusercontent.com/u/62525368?s=200&v=4" width="60"
-          height="60" class="d-inline-block align-top" alt=""></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <span class="mr-2 nav-link">
-              <button type="button" class="btn btn-outline-success btn-primary">
-                <a href="/">Random html</a></button>
-            </span>
-          </li>
-          <li class="nav-item active">
-            <span class="mr-2 nav-link">
-              <button type="button" class="btn btn-outline-success btn-primary">
-                <a href="/txt">Random text</a></button>
-            </span>
-          </li>
-          <li class="nav-item active">
-            <span class="mr-2 nav-link ml-2">
-              <button type="button" class="btn btn-outline-success btn-primary">
-                <a href="/json">Random json</a></button>
-            </span>
-          </li>
-          <li class="nav-item">
-            <span class="mr-2 ml-2 nav-link">
-              <button type="button" class="btn btn-outline-primary btn-secondary">
-                <a href="/{{ message_hash }}.html">Permalink html</a></button>
-            </span>
-          </li>
-          <li class="nav-item">
-            <span class="ml-2 nav-link">
-              <button type="button" class="btn btn-outline-primary btn-secondary">
-                <a href="/{{ message_hash }}.txt">Permalink text</a></button>
-            </span>
-          </li>
-          <li class="nav-item">
-            <span class="ml-2 nav-link">
-              <button type="button" class="btn btn-outline-primary btn-secondary">
-                <a href="/{{ message_hash }}.json">Permalink json</a></button>
-            </span>
-          </li>
-        </ul>
-        <span class="navbar-text">
-          <button type="button" class="btn btn-outline-danger btn-dark">
-            <a href="https://github.com/casjay-heroku/commitment" target="_blank">GitHub</a>
-          </button>
-        </span>
+  <body>
+    <div class="container v-100">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark h4">
+        <a class="navbar-brand" href="/"
+          ><img
+            src="https://avatars3.githubusercontent.com/u/62525368?s=200&v=4"
+            width="60"
+            height="60"
+            class="d-inline-block align-top"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <span class="mr-2 nav-link">
+                <button
+                  type="button"
+                  class="btn btn-outline-success btn-primary"
+                >
+                  <a href="/">Random html</a>
+                </button>
+              </span>
+            </li>
+            <li class="nav-item active">
+              <span class="mr-2 nav-link">
+                <button
+                  type="button"
+                  class="btn btn-outline-success btn-primary"
+                >
+                  <a href="/txt">Random text</a>
+                </button>
+              </span>
+            </li>
+            <li class="nav-item active">
+              <span class="mr-2 nav-link ml-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-success btn-primary"
+                >
+                  <a href="/json">Random json</a>
+                </button>
+              </span>
+            </li>
+            <li class="nav-item">
+              <span class="mr-2 ml-2 nav-link">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-secondary"
+                >
+                  <a href="/{{ message_hash }}.html">Permalink html</a>
+                </button>
+              </span>
+            </li>
+            <li class="nav-item">
+              <span class="ml-2 nav-link">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-secondary"
+                >
+                  <a href="/{{ message_hash }}.txt">Permalink text</a>
+                </button>
+              </span>
+            </li>
+            <li class="nav-item">
+              <span class="ml-2 nav-link">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-secondary"
+                >
+                  <a href="/{{ message_hash }}.json">Permalink json</a>
+                </button>
+              </span>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <button type="button" class="btn btn-outline-danger btn-dark">
+              <a
+                href="https://github.com/casjay-heroku/commitment"
+                target="_blank"
+                >GitHub</a
+              >
+            </button>
+          </span>
+        </div>
+      </nav>
+      <br /><br /><br />
+      <div style="height: 100px">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-9 align-self-center">
+            <div class="h1 border border-info pt-5 pb-5">{% raw message %}</div>
+          </div>
+        </div>
       </div>
-    </nav>
-
-
-    <br /><br /><br /><br /><br />
-    <div class="row justify-content-center text-center">
-      <div class="col-9 align-self-center">
-        <div class="h1 border border-info pt-5 pb-5">{% raw message %}</div>
+      <br /><br /><br /><br /><br /><br />
+      <div class="mt-5 justify-content-center text-center">
+        <button
+          type="button"
+          class="btn btn-primary btn-lg"
+          onClick="window.location.reload();"
+        >
+          Refresh page
+        </button>
       </div>
     </div>
-    <br /><br /><br />
-  </div>
-
-</body>
-
+    <br /><br />
+  </body>
 </html>
-
